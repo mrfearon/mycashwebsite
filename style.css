@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f4e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cash-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #28a745;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.verified {
+    color: #28a745;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.verified i {
+    color: #1a73e8;
+}
+
+h2 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 span {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Zoom Effect for $750.00 */
+.zoom-effect {
+    display: inline-block;
+    animation: zoomInOut 2s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.steps {
+    list-style: none;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.steps li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+.trustpilot {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #28a745;
+}
+
+.trustpilot i {
+    color: #28a745;
+}
+
+/* Pop-up Styles */
+.popup {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 300px;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.popup-content i {
+    color: #28a745;
+    font-size: 1rem;
+}
+
+.popup-content span {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .cash-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .verified {
+        font-size: 0.7rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h2 span {
+        font-size: 0.8rem;
+    }
+
+    .steps li {
+        font-size: 0.9rem;
+    }
+
+    .step-number {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 20px;
+    }
+
+    .trustpilot {
+        font-size: 0.7rem;
+    }
+}
